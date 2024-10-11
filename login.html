@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        body
+        {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        form
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            flex-wrap: wrap;
+            width: 60%;
+        }
+        h2
+        {
+            text-align: center;
+        }
+        .voucherInput
+        {
+            padding: 10px;
+            outline: none; 
+            border: 2px solid #e5e5e5;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+            font-size: 18px;
+            flex: 1 0 100px;
+            transform: 1s;
+        }
+        .voucherInput:hover
+        {
+            border: 2px solid royalblue;
+            background-color: transparent;
+            color: royalblue;
+        }
+        .voucherInput:focus
+        {
+            border: 2px solid royalblue;
+            background-color: transparent;
+            color: royalblue;
+        }
+        .voucherBut
+        {
+            padding: 10px;
+            outline: none; 
+            border-radius: 5px;
+            background-color: royalblue;
+            color: white;
+            font-size: 18px;
+            flex: 1 0 10px;
+            cursor: pointer;
+            transition: 1s;
+            border: 2px solid royalblue;
+        }
+        .voucherBut:hover
+        {
+            border: 2px solid royalblue;
+            background-color: transparent;
+            color: royalblue;
+        }
+        .logo
+        {
+            height: 100px;
+            width: 100px;
+            
+        }
+        @media (max-width: 600px){
+            form
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+        .voucherInput
+        {
+            flex: 1 0 140px;
+        }
+        .voucherBut
+        {
+            flex: 1 0 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <img src="starbucks.jpg" class="logo" alt="STARBUGS">
+    <h2>Enter Voucher Code</h2>
+    <form action="/generate-voucher" method="POST">
+        <input type="number" class="voucherInput" name="price" min="1" placeholder="Enter Voucher Number">
+        <input type="submit" class="voucherBut" value="Login">  
+    </form>
+</body>
+</html>
